@@ -21,7 +21,7 @@
 
 [teamLmix:mocks] mixin
  itemtype = content
- - mocksSource (string) indexed=no
+ - mocksSource (string) i18n mandatory indexed=no
 
 [teamLnt:webapp] > jnt:content, jmix:mainResource, jmix:webappComponents, teamLmix:showInTree, teamLmix:mocks, teamLmix:webappStaticLabels, mix:title
  - subtitle (string) i18n
