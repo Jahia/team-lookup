@@ -1,0 +1,12 @@
+{
+  "name": "teamLmix:internalMock",
+  "fields": [
+    {
+      "name": "mockIn",
+      "selectorType": "CodeMirror",
+      "selectorOptionsMap": {
+        "mode": "javascript"
+      }
+    }
+  ]
+}

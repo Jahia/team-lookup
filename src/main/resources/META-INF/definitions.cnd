@@ -1,0 +1,27 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<teamLmix = 'http://modules.se.jahia.org/team-lookup/mix/1.0'>
+<teamLnt = 'http://modules.se.jahia.org/team-lookup/nt/1.0'>
+
+[jmix:webappComponents] > jmix:droppableContent mixin
+[teamLmix:showInTree] > jmix:visibleInContentTree, jmix:editorialContent mixin
+
+[teamLmix:webappStaticLabels] mixin
+ - inputSearchPlaceholder (string) = resourceBundle('label.inputSearchPlaceholder') autocreated i18n mandatory indexed=no
+ - btnPrevious (string) = resourceBundle('label.btnPrevious') autocreated i18n mandatory indexed=no
+ - btnNext (string) = resourceBundle('label.btnNext') autocreated i18n mandatory indexed=no
+
+[teamLmix:internalMock] > jmix:dynamicFieldset mixin
+ extends = teamLmix:mocks
+ - mockIn (string) i18n indexed=no
+
+[teamLmix:externalMock] > jmix:dynamicFieldset mixin
+ extends = teamLmix:mocks
+ - mockExt (string) = 'https://' i18n indexed=no
+
+[teamLmix:mocks] mixin
+ itemtype = content
+ - mocksSource (string) indexed=no
+
+[teamLnt:webapp] > jnt:content, jmix:mainResource, jmix:webappComponents, teamLmix:showInTree, teamLmix:mocks, teamLmix:webappStaticLabels, mix:title
+ - subtitle (string) i18n

@@ -1,0 +1,40 @@
+{
+  "name": "teamLmix:mocks",
+  "description": "",
+  "dynamic": false,
+  "fields": [
+    {
+      "name": "mocksSource",
+      "selectorType": "Choicelist",
+      "valueConstraints": [
+        {
+          "value": {
+            "type": "String",
+            "value": "json"
+          },
+          "displayValue": "Provide your json",
+          "propertyList": [
+            {
+              "name": "addMixin",
+              "value": "teamLmix:internalMock"
+            }
+          ]
+        },
+        {
+          "value": {
+            "type": "String",
+            "value": "url"
+          },
+          "displayValue": "Provide an URL",
+          "propertyList": [
+            {
+              "name": "addMixin",
+              "value": "teamLmix:externalMock"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
